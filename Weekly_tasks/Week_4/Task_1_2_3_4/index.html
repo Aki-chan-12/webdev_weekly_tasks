@@ -1,0 +1,189 @@
+<!--Task 1: Design your personal collection. 
+
+Using the links.html you created in the class as inspiration: 
+
+1. Build your personal collection as a work in progress. Collect resources, inspiration, artists you admire, websites you like, designs you find interesting, or anything that you would to add to your personal inspiration library.
+
+2. Style your collection using CSS. Be creative. Add colours, margins, backgrounds, gradients, and experiment with the styles.
+
+3. Use an external font to style your text. (See: Libre Fonts by Womxn, and Google Fonts)
+-->
+
+
+<!--1. Inspiration:
+    My favourite photographer - Liam Wong
+
+    Websites:
+    https://jaredkozel.com/sprite-zero-limits 
+    https://rainforest.arkivert.no/#kart 
+    https://dianadanieli.com 
+    https://spotify.design 
+    https://fpp.net 
+    https://www.flyhyer.com 
+    https://curious.co 
+    https://unseen.co 
+    https://www.nasa.gov 
+    https://www.capellaspace.com 
+    https://terranorbital.com 
+    https://www.ursamajor.com 
+    https://www.benchmarkspacesystems.com 
+    https://www.pixxel.space 
+    https://www.epsilon3.io 
+    https://www.spinlaunch.com/#p6
+    https://www.derekmckechnie.com 
+    https://www.kaijiechen.com 
+    https://water-pas.ru 
+    https://mospravcen.ru 
+    https://catarina-kuhni.ru
+    https://lemme.looknewsite.ru 
+    https://lada.rostsayt.ru
+    https://hart-mansclub.ru
+    https://superjet.rostsayt.ru 
+    https://12wave.com
+
+-->
+
+<!--and-->
+
+<!--Task 2: Apply different hover styles to links
+
+    On your personal collections page, apply different transition styles to different links so images, text, or icons change.  
+
+    See: https://www.w3schools.com/css/css_link.asp
+
+-->
+
+<!--and-->
+
+<!--Extended Task 4: 
+
+    Incorporate a CSS library (i.e. w3.css, Boostrap, Materialise) to set different link styles on your main index.html (home) page.
+
+    See: https://github.com/troxler/awesome-css-frameworks
+
+    = Pico CSS library was added
+
+-->
+
+<!--Further comments on the website navigation system: 
+
+    Press any of these: 
+    Home
+    Design Tool
+    Time-lapse
+    Virtual Tours
+    Tech Talk
+
+    and it will go straight away to the image, so you don't to scroll the website down.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Dancing+Script&family=Kalam&display=swap" rel="stylesheet">
+    <title>Aerospace Engineering in Neon</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+            font-family: 'Beth Ellen', cursive;
+            color: #fff;
+        }
+        .container {
+            padding: 2rem;
+        }
+        h1, h2, figure figcaption {
+            font-family: 'Beth Ellen', cursive;
+        }
+        nav ul li a, nav ul li strong, footer small {
+            font-family: 'Kalam', cursive;
+        }
+        p {
+            font-family: 'Dancing Script', cursive;
+        }
+        footer {
+            background-color: #24243e;
+            color: #fff;
+        }
+        .engineering-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1534777367038-9404f45b3f8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            opacity: 0.5;
+            z-index: -1;
+        }
+        .grid {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Hover styles for links */
+        nav ul li a:hover {
+            color: #ff00ff; /* text color */
+            background-color: #000000; /* background color */
+            text-decoration: underline; /* underline  */
+        }
+
+        figure a:hover img {
+            opacity: 0.7; /* opacity  */
+            transform: scale(1.1); /* Zoom  */
+        }
+
+        nav ul li a, figure a img {
+            transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+        }
+    </style>
+</head>
+<body>
+    <div class="engineering-background"></div>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Neon AeroTech</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#design-tool">Home</a></li>
+            <li><a href="#design-tool">Design Tool</a></li>
+            <li><a href="#time-lapse">Time-lapse</a></li>
+            <li><a href="#virtual-tours" role="button">Virtual Tours</a></li>
+            <li><a href="#tech-talk">Tech Talk</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Aerospace Engineering in Neon</h2>
+                    <h3>Innovate and Explore</h3>
+                </hgroup>
+                <p>Delve into the world of neon-lit aerospace engineering. From designing spacecraft to exploring virtual facilities, experience the fusion of technology and art.</p>
+                <figure id="design-tool">
+                    <a href="#design-tool"><img src="aircraft.png" alt="Interactive Design Tool" /></a>
+                    <figcaption>Interactive Design Tool</figcaption>
+                </figure>
+                <figure id="time-lapse">
+                    <a href="#time-lapse"><img src="Interactive Design Tool.jpeg" alt="Neon Time-lapse Videos" /></a>
+                    <figcaption>Neon Time-lapse Videos</figcaption>
+                </figure>
+                <figure id="virtual-tours">
+                    <a href="#virtual-tours"><img src="Virtual Tours of Aerospace Facilities.jpg" alt="Virtual Tours of Aerospace Facilities" /></a>
+                    <figcaption>Virtual Tours of Aerospace Facilities</figcaption>
+                </figure>
+                <figure id="tech-talk">
+                    <a href="#tech-talk"><img src="Tech Talk - Aerospace Forum.png" alt="Tech Talk - Aerospace Forum" /></a>
+                    <figcaption>Tech Talk - Aerospace Forum</figcaption>
+                </figure>
+            </section>
+        </div>
+    </main>
+    <footer class="container">
+        <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+    </footer>
+</body>
+</html>

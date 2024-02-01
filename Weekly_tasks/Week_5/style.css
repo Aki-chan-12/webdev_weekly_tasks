@@ -1,0 +1,58 @@
+@import url('https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css');
+
+@keyframes backgroundAnimation {
+  0% {background-color: #ff6666;}
+  25% {background-color: #ffcc66;}
+  50% {background-color: #ffff66;}
+  75% {background-color: #c266ff;}
+  100% {background-color: #ff66cc;}
+}
+body {
+  animation: backgroundAnimation 20s infinite alternate;
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.image-gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.task-list {
+  margin-top: 20px;
+  list-style: none;
+}
+.task-list li {
+  margin-bottom: 10px;
+}
+.task-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+@media (max-width: 600px) {
+  h1, h2, h3 {
+    font-size: 1.5em;
+  }
+  .image-gallery img {
+    max-width: 100%;
+  }
+  .task-list li {
+    font-size: 1em;
+  }
+}
+@media (min-width: 601px) and (max-width: 1200px) {
+  h1, h2, h3 {
+    font-size: 2em;
+  }
+  .image-gallery img {
+    max-width: 200px;
+  }
+  .task-list li {
+    font-size: 1.2em;
+  }
+}

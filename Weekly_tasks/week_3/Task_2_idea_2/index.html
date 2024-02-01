@@ -1,0 +1,160 @@
+<!--Task 2: 
+    apply CSS styles to your form elements using Bootstrap.
+    (the Specialized section might be of interest)
+    List: 
+NES.css - NES-style CSS Framework.
+ Demo, Docs, Repo | #SCSS
+
+98.css - CSS library for building interfaces that look like Windows 98.
+ Repo | #CSS
+
+Tufte CSS - Style your webpage like Edward Tufte’s handouts.
+ Repo | #CSS
+
+Gutenberg - Modern framework to print the web correctly.
+ Demo, Docs | #SCSS
+
+XP.css - CSS library for building interfaces that look like Windows XP.
+ Repo | #PostCSS
+
+Bojler - Email framework for developing responsive and lightweight email templates.
+ Docs, Repo | #SCSS
+
+TuiCss - Library to create MS-DOS interfaces.
+ Demo, Docs | #SCSS
+
+7.css - CSS library for building interfaces that look like Windows 7.
+ Repo | #PostCSS
+-->
+
+<!--Trying to integrate Bootstrap into my quiz.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Quiz</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function submitQuiz() {
+            // Placeholder for quiz submission logic
+            // Display an alert based on the quiz results
+            $('#quizAlert').show(); // Show the alert on submission
+        }
+    </script>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center">Multiple Choice Quiz</h1>
+    <h2 class="text-center">Topics from different IT fields</h2>
+
+    <div id="quizAlert" class="alert alert-success" role="alert" style="display:none;">
+        Quiz Submitted Successfully!
+    </div>
+
+    <form action="#" method="post" id="quizForm" onsubmit="event.preventDefault(); submitQuiz();">
+
+        <fieldset>
+            <legend>Question 1</legend>
+            <label>In which year was the game "The Legend of Zelda: Breath of the Wild" released?</label><br>
+            <label for="q1Option1"><input type="radio" id="q1Option1" name="q1" value="A"> 2018</label><br>
+            <label for="q1Option2"><input type="radio" id="q1Option2" name="q1" value="B"> 2016</label><br>
+            <label for="q1Option3"><input type="radio" id="q1Option3" name="q1" value="C"> 2017</label>
+        </fieldset>
+    
+        <br>
+    
+        <fieldset>
+            <legend>Question 2</legend>
+            <label>What is the underlying technology behind cryptocurrencies like Bitcoin?</label><br>
+            <label for="q2Option1"><input type="radio" id="q2Option1" name="q2" value="A"> Cryptographic Hash Functions</label><br>
+            <label for="q2Option2"><input type="radio" id="q2Option2" name="q2" value="B"> Blockchain</label><br>
+            <label for="q2Option3"><input type="radio" id="q2Option3" name="q2" value="C"> Quantum Encryption</label>
+        </fieldset>
+    
+        <br>
+    
+        <fieldset>
+            <legend>Question 3</legend>
+            <label> What was the name of the first artificial Earth satellite?</label><br>
+            <label for="q3Option1"><input type="radio" id="q3Option1" name="q3" value="A"> Luna 1</label><br>
+            <label for="q3Option2"><input type="radio" id="q3Option2" name="q3" value="B"> Sputnik 1</label><br>
+            <label for="q3Option3"><input type="radio" id="q3Option3" name="q3" value="C"> Vanguard 1</label>
+        </fieldset>
+    
+        <br>
+    
+        <fieldset>
+            <legend>Question 4</legend>
+            <label>In the game "Minecraft," what color is a Creeper's skin?</label><br>
+            <label>Check your spelling</label><br>
+            <label for="textQuestion4">Write a color:</label>
+            <input type="text" id="textQuestion4" name="textQuestion4">
+        </fieldset>
+    
+        <br>
+    
+        <fieldset>
+            <legend>Question 5</legend>
+            <label>On what date was the World Wide Web (WWW) officially launched for public use?</label><br>
+            <label>You can choose for a time - 00:00</label><br>
+            <label for="datetimeLocalQuestion">Choose a date and time:</label>
+            <input type="datetime-local" id="datetimeLocalQuestion" name="datetimeLocalQuestion">
+        </fieldset>
+    
+        <br>
+    
+        <fieldset>
+            <legend>Question 6</legend>
+            <label>Identify the pioneers of the internet.</label><br>
+            <label>Choose two correct options:</label><br>
+            <label for="checkboxQuestion1A"><input type="checkbox" id="checkboxQuestion1A" name="checkboxQuestion1" value="A"> Mark Zuckerberg</label><br>
+            <label for="checkboxQuestion1B"><input type="checkbox" id="checkboxQuestion1B" name="checkboxQuestion1" value="B"> Bill Gates</label><br>
+            <label for="checkboxQuestion1C"><input type="checkbox" id="checkboxQuestion1C" name="checkboxQuestion1" value="C"> Tim Berners-Lee</label><br>
+            <label for="checkboxQuestion1D"><input type="checkbox" id="checkboxQuestion1D" name="checkboxQuestion1" value="D"> Steve Jobs</label><br>
+            <label for="checkboxQuestion1E"><input type="checkbox" id="checkboxQuestion1E" name="checkboxQuestion1" value="E"> Paul Allen</label><br>
+            <label for="checkboxQuestion1F"><input type="checkbox" id="checkboxQuestion1F" name="checkboxQuestion1" value="F"> Vinton Cerf</label>
+        </fieldset>
+    
+        <br>
+    
+        <fieldset>
+            <legend>Question 7</legend>
+            <label>Which programming language is often used for building dynamic web applications?</label><br>
+            <label>Check your spelling</label><br>
+            <label for="textQuestion7">Provide a text answer:</label>
+            <input type="text" id="textQuestion7" name="textQuestion7">
+        </fieldset>
+    
+        <br>
+
+        <fieldset class="mb-3">
+            <legend>Question 1</legend>
+            <label>In which year was the game "The Legend of Zelda: Breath of the Wild" released?</label><br>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1Option1" value="A">
+                <label class="form-check-label" for="q1Option1">2018</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1Option2" value="B">
+                <label class="form-check-label" for="q1Option2">2016</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1Option3" value="C">
+                <label class="form-check-label" for="q1Option3">2017</label>
+            </div>
+        </fieldset>
+
+        
+        <button type="submit" class="btn btn-primary">Submit Quiz</button>
+        <button type="reset" class="btn btn-secondary">Reset Form</button>
+    </form>
+</div>
+
+</body>
+</html>

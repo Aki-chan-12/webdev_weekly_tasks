@@ -1,0 +1,49 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+#storyContainer {
+    display: flex;
+    flex-direction: row; /* Align sections horizontally */
+    width: 300vw; /* Assuming 3 sections for simplicity, adjust as needed */
+}
+
+.story-part {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* For parallax positioning */
+}
+
+nav#storyNav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.story-text {
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.story-part {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Ensure no overflow from text */
+}

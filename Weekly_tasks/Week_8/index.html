@@ -1,0 +1,46 @@
+<!--Task
+   1. Create your own tiny internet corner, using Google Sheets as an API.
+
+   - It can be books you recommend, or music you'd like other people to listen to.
+   - Or it can be places to visit, or food to try in London
+   - Or it an also be parks to read a book
+   - Or any other information that you want to recommend to people
+   - Or maybe you can also create an open and collaborative project where people can also add their recommendations to your Sheet and build a collective recommendation list
+
+   2. Use Async/Await to fetch the API
+
+   - using forEach loop, create and append elements as needed on to the DOM
+   - Style the web page
+   - Add a link to to your spreadsheet at the bottom of your web page
+   - git add; git commit; git push; and upload it on cyberduck as well
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food to Try in London</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>London Food Guide</h1>
+        <table id="food-table">
+            <thead>
+                <tr>
+                    <th>Dish Name</th>
+                    <th>Type</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody id="food-list"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+    <footer>
+        <p>Check out the full list <a href="https://docs.google.com/spreadsheets/d/1EpWw_P5drSllN_AqHMup2fp6fJrx0G22iw2Jz4lKw0o/edit?usp=sharing" target="_blank">here</a>.</p>
+    </footer>
+    

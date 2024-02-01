@@ -1,0 +1,91 @@
+/* Comprehensive styles for the entire website, ensuring accessibility and responsiveness */
+
+/* Accessibility toolbar styles */
+.accessibility-toolbar {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.accessibility-toolbar label,
+.accessibility-toolbar button {
+    margin: 0 5px;
+}
+
+.accessibility-toolbar button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.accessibility-toolbar button:hover {
+    background-color: #45a049;
+}
+
+/* Theme selector styles */
+.theme-selector {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.theme-selector select, .custom-theme input[type="color"], .custom-theme button {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Custom theme styles */
+.custom-theme button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.custom-theme button:hover {
+    background-color: #45a049;
+}
+
+/* Base and theme-specific styles */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.blue-theme {
+    background-color: #e0f7fa;
+    color: #0277bd;
+}
+
+.green-theme {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.content {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* High Contrast Mode Styles */
+.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+.high-contrast a {
+    color: #FFD700; /* Gold color for links */
+}

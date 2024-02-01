@@ -1,0 +1,107 @@
+<!--Task: 
+    1. Develop your anideafora.website Figma design into a webpage using CSS Flex / Grid systems (or feel free to pick a new idea).
+
+    Ideas from anideafora.website which I liked:
+
+    a website with a secret hidden room - ?
+    a website as an observatory - can show coutnry, view from cosmos 
+    a website for the morning - morning routine tasks to follow 
+    a website as a lava lamp - different colours which are changing 
+
+    Final chosen idea: a website for the morning
+
+    2. Add @media queries to your page to make it response across all different devices. Apply different font-sizes, and adjust your layouts based on the screen size of the device.
+-->
+
+<!--Extended tasks: 
+    1. Add one image following the “srcset” rule (different sizes in different devices). 
+
+    2. Try including animations using the Animate.css library
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="container-fluid">
+  <ul>
+    <li><strong>Morning Website</strong></li>
+  </ul>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#steps">Steps</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="container" id="home">
+  <div class="grid">
+    <section>
+      <hgroup>
+        <h2>WELCOME TO YOUR MORNING</h2>
+        <br> 
+        <h3>Yay! New day just started! Let's enjoy it!</h3>
+      </hgroup>
+      <p>Follow your regular steps:</p>
+      <br> 
+      <div class="image-gallery">
+        <img src="morning1.png" srcset="morning1.png 300w, morning1.png 600w, morning1.png 1200w" sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 1200px" alt="Morning Image" />
+        <img src="coffee_character.png" alt="Coffee Character" />
+        <img src="tea_character.png" alt="Tea Character" />
+      </div>
+      <br>
+      <br>
+      <br> 
+      <br> 
+      <br> 
+
+      <ul class="task-list" id="steps"> 
+        <li><input type="checkbox" id="task1"><label for="task1">Personal hygiene: including brushing teeth, and skincare.</label></li>
+        <li><input type="checkbox" id="task2"><label for="task2">Drink some water</label></li>
+        <li><input type="checkbox" id="task3"><label for="task3"> Do some physical activityt</label></li>
+        <li><input type="checkbox" id="task4"><label for="task4">Personal hygine 2: get a shower, and dress up</label></li>
+        <li><input type="checkbox" id="task5"><label for="task5">Eat your breakfast</label></li>
+        <li><input type="checkbox" id="task6"><label for="task6">Enjoy your coffee or tea</label></li>
+        <li><input type="checkbox" id="task7"><label for="task7">Listen to podcast or read a book</label></li>
+        <li><input type="checkbox" id="task8"><label for="task8">Plan your day</label></li>
+        <li><input type="checkbox" id="task9"><label for="task9">Go to university</label></li>
+        <li><input type="checkbox" id="task10"><label for="task10">Cook dinner or buy it</label></li>
+        <li><input type="checkbox" id="task11"><label for="task11">Watch lectures and do your tasks</label></li>
+        <li><input type="checkbox" id="task12"><label for="task12">Enjoy your free time</label></li>
+        <li><input type="checkbox" id="task13"><label for="task13">Personal hygine 3: get ready before going to bed</label></li>
+        <li><input type="checkbox" id="task14"><label for="task14">Read 50 pages of currently reading book</label></li>
+        <li><input type="checkbox" id="task15"><label for="task15">Game with friends</label></li>
+        <li><input type="checkbox" id="task16"><label for="task16">It's time to go to sleep!</label></li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<section aria-label="Subscribe example" id="contact">
+  <div class="container">
+    <article>
+      <hgroup>
+        <h2>Stay Updated</h2>
+        <h3>Join Our Newsletter</h3>
+      </hgroup>
+      <form class="grid">
+        <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Name" required />
+        <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Email" required />
+        <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+      </form>
+    </article>
+  </div>
+</section>
+
+<footer class="container">
+  <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a></small>
+</footer>
+</body>
+</html>

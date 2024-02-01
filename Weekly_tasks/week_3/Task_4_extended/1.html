@@ -1,0 +1,60 @@
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("quizForm").addEventListener("submit", submitQuiz);
+        });
+
+        function submitQuiz(event) {
+            event.preventDefault();
+
+            const correctAnswers = {
+                q1: 'C', // 2017
+                q2: 'B', // Blockchain
+                q3: 'B', // Sputnik 1
+                textQuestion4: 'Green',
+                datetimeLocalQuestion: '1990-12-20T00:00', // December 20, 1990
+                checkboxQuestion1: ['C', 'F'], // Tim Berners-Lee and Vinton Cerf
+                textQuestion7: 'JavaScript'
+            };
+
+            let isCorrect = true;
+            let answers = {
+                q1: document.querySelector('input[name="q1"]:checked')?.value,
+                q2: document.querySelector('input[name="q2"]:checked')?.value,
+                q3: document.querySelector('input[name="q3"]:checked')?.value,
+                textQuestion4: document.getElementById("textQuestion4").value.trim().toLowerCase(),
+                datetimeLocalQuestion: document.getElementById("datetimeLocalQuestion").value,
+                checkboxQuestion1: Array.from(document.querySelectorAll('input[name="checkboxQuestion1"]:checked')).map(el => el.value),
+                textQuestion7: document.getElementById("textQuestion7").value.trim()
+            };
+
+            // Check radio and text inputs
+            for (const question in correctAnswers) {
+                if (Array.isArray(correctAnswers[question])) {
+                    if (!arraysEqual(correctAnswers[question], answers[question])) {
+                        isCorrect = false;
+                        break;
+                    }
+                } else {
+                    if (correctAnswers[question].toLowerCase() !== answers[question].toLowerCase()) {
+                        isCorrect = false;
+                        break;
+                    }
+                }
+            }
+
+            let resultMessage = isCorrect ? "All answers are correct!" : "Some answers are incorrect.";
+            alert(resultMessage);
+        }
+
+        function arraysEqual(a, b) {
+            if (a === b) return true;
+            if (a == null || b == null) return false;
+            if (a.length !== b.length) return false;
+
+            for (var i = 0; i < a.length; ++i) {
+                if (a[i] !== b[i]) return false;
+            }
+            return true;
+        }
+    </script>

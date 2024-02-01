@@ -1,0 +1,16 @@
+
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 40px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 15px;
+    background-color: #4caf50;
+    border-radius: 10px;
+}

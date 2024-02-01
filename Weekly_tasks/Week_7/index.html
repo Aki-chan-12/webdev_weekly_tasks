@@ -1,0 +1,55 @@
+<!--Task: 
+    Create a website where users can pick their own 'theme'
+    
+    1. Create form elements or buttons that change the styling of the website using device-independant eventListeners
+    https://webaim.org/techniques/javascript/eve 
+    
+    2. Make sure your colours are accessible. Randoma11y is a great resource for picking accessible colours
+    https://randoma11y.com/ 
+
+    Further:
+    Create an accessibility toolbar where people using your website can pick their font size, colours, and underline links/buttons etc
+
+    Example here - https://pagespeaker.com/toolbar/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Theme Selector</title>
+    <link rel="stylesheet" href="styles.css">
+    <div class="content">
+        <h1>Welcome to Our Comprehensive Theme Selector Website!</h1>
+        <p>Choose a theme or customize your experience.</p>
+    </div>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="accessibility-toolbar">
+        <label>Font Size:</label>
+        <button id="increase-font">A+</button>
+        <button id="decrease-font">A-</button>
+        <button id="underline-links">Underline Links</button>
+        <button id="toggle-contrast">Toggle High Contrast</button>
+    </div>
+    <div class="theme-selector">
+        <label for="theme-dropdown">Choose a Theme:</label>
+        <select id="theme-dropdown">
+            <option value="light">Light Theme</option>
+            <option value="dark">Dark Theme</option>
+            <option value="blue">Blue Theme</option>
+            <option value="green">Green Theme</option>
+        </select>
+        <div class="custom-theme">
+            <input type="color" id="bg-color" title="Background Color">
+            <input type="color" id="text-color" title="Text Color">
+            <button id="apply-custom-theme">Apply Custom Theme</button>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+

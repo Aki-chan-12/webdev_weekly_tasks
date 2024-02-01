@@ -1,0 +1,63 @@
+<!--<!--Task: 
+    1. Download NodeJS - done
+    2. Setup a Vite Vanilla JavaScript Project and - done
+    3. Install `animejs` - done
+    4. Create a webpage and design animations on using animejs - done
+-->
+
+<!-- Vite Cheatsheet
+
+    Creating a project
+    1. npm create vite - Creating a project
+    - Vanilla - to select Vanilla JavaScript
+    - JavaScript - variant
+    2. cd project-name change directory to your project folder
+    3. npm install to install all the necessary packages (YOU WON'T BE ABLE TO START THE SERVER WITHOUT RUNNING THIS COMMAND)
+    4. npm run dev to run the development server
+
+
+    Building a project
+
+    npm run build builds your project and saves it into dist folder Note: You can run this at the end.
+
+
+    Vite Project Structure
+
+    dist // distribution folder - this is where your built project will be saved
+    node_modules // all the dependencies for your project are installed here
+    public // all static files like images, fonts, videos etc MUST be in this folder
+    .gitignore // rules to ignore pushing select files and folders to git
+    index.html // main html file
+    main.js // main javascript file
+    ....
+    package-lock.json
+    package.json // this is the most important file in nodejs projects. do not delete this
+   
+
+    Deploying to surge.sh
+
+    1. npm install --global surge - Install surge globally
+    2. npm run build - Build your project
+    3. surge dist - Deploy the dist folder to surge
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime.js Animation Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="main-heading">Welcome to Anime.js</h1>
+    <p id="description">Webpage and design animations.</p>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <button id="trigger-animation">Start Animation</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

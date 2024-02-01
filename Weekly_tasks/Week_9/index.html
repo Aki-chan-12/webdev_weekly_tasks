@@ -1,0 +1,84 @@
+<!--Task: Create a webpage that tells a story as you scroll
+
+    1. Add animations using parallax and/or IntersectionObserver
+
+    - You can use text, images, buttons or any other content that adds value to your story
+    - Maybe you can have buttons that take you to a particular element on the screen
+    - Or maybe your story can be horizontal as well?
+
+    Hint: instead of translating Y positions, translate X position to play with elements on X-axis
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Story</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="storyContainer">
+        <section class="story-part" id="part1">
+            <div class="story-text">
+
+                <p>In the heart of a bustling city, a group of five gamers stood before the grand opening of "NexWorld," a virtual reality game that promised an escape far beyond the realms of their imagination. Each gamer, carrying the weight of their real-world struggles, found solace in the anticipation of an unparalleled adventure.</p>
+
+                <p>As they donned their VR headsets, a surge of electricity whisked them away from their urban confines into the lush, sprawling landscapes of NexWorld. The game's entry process was nothing short of a marvel; it scanned their senses, adapting the environment to be as realistic as possible. The air smelled of fresh earth and pine, the ground beneath their feet felt uneven and rugged—every detail meticulously crafted to immerse them fully.</p>
+
+                <p>Their first steps into NexWorld were cautious, filled with wide-eyed wonder and awe. Mountains stretched into the sky, their peaks touching the clouds, and forests teemed with creatures both familiar and mythical. The group set out to explore, each gamer finding solace in this digital utopia, a stark contrast to the concrete jungle they had left behind.</p>
+
+            </div>
+        </section>
+        <section class="story-part" id="part2">
+            <div class="story-text">
+
+                <p>As they ventured deeper, NexWorld revealed its true nature. The game was designed not just for escape but for transformation. The first challenge came swiftly—a labyrinth forest that reshaped itself, defying logic and physics. It was here that the gamers realized NexWorld's stakes were higher than any game they'd played before. The dangers felt real; the threat of failure carried a weight that virtuality usually lacked.</p>
+
+                <p>Collaboration became their strongest tool. Alex, the strategist, mapped their course; Jordan, the puzzle-solver, deciphered the forest's patterns; Mia, with her quick reflexes, led them through narrow escapes; Luke, the peacemaker, kept morale high; and Zoe, the story-seeker, found clues in the lore of NexWorld that guided their path.</p>
+
+                <p>Their bond strengthened, the group faced challenges that tested their fears, their patience, and their resolve. NexWorld was not just a game; it was a journey through the innermost parts of their beings, confronting them with scenarios that required more than just gaming skills—they demanded courage, trust, and the willingness to face the unknown.</p>
+
+            </div>
+        </section>
+        <section class="story-part" id="part3">
+            <div class="story-text">
+                
+                <p>The ultimate challenge awaited, a fortress shrouded in mystery and guarded by the game's most formidable foes. It was the key to their escape, to return to the reality they had sought to flee yet now yearned to embrace once more.</p>
+
+                <p>The battle was fierce, a testament to their growth within the game. Strategies that had once failed were now executed with precision; fears that had once crippled were now faced with bravery. The game, in its final moments, blurred the lines between virtual and reality, teaching them the value of their experiences, both digital and physical.</p>
+
+                <p>As they defeated the final boss, a portal opened, leading them back to the real world. The gamers removed their headsets, finding themselves in the same room where their journey began, but they were not the same people. NexWorld had changed them, showing that the ultimate escape was not from reality, but into the depths of their own strength and unity.</p>
+
+                <p>They stepped outside, the city's noise welcoming them back, but their hearts carried the silence of the mountains, the whispers of the forests, and the bonds forged in virtuality—a reminder that every world, no matter how digital, is a chance to discover something real.</p>
+
+            </div>
+        </section>
+        <!-- Add more sections as needed -->
+    </div>
+    
+    <nav id="storyNav">
+        <button onclick="scrollToPart('part1')">Part 1</button>
+        <button onclick="scrollToPart('part2')">Part 2</button>
+        <button onclick="scrollToPart('part3')">Part 3</button>
+        <!-- Add more navigation buttons as needed -->
+    </nav>
+    
+
+<nav id="storyNav">
+    <button onclick="scrollToPart('part1')">Part 1</button>
+    <button onclick="scrollToPart('part2')">Part 2</button>
+    <button onclick="scrollToPart('part3')">Part 3</button>
+    <!-- Add more navigation buttons as needed -->
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
